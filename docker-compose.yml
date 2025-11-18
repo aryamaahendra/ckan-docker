@@ -14,6 +14,7 @@ services:
     networks:
       - webnet
       - ckannet
+      - dokploy-network
     depends_on:
       ckan:
         condition: service_healthy
@@ -112,3 +113,5 @@ networks:
     internal: true
   redisnet:
     internal: true
+  dokploy-network:
+    external: true
